@@ -2,7 +2,7 @@ pipeline {
 
   environment {
     registry = "dgm83/pruebajen"
-    dockerImage = ""
+    registryCredential = 'd=8!DFcZ~b@5U&tV'
   }
 
   agent any
