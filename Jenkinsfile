@@ -5,7 +5,7 @@ pipeline {
   }
 
   environment {
-    registryUri = "dgm83/pruebajen:v2"
+    registry = "dgm83/pruebajen:v2"
     registryCredential = 'dockerhub'
   }
 
