@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registryUri = "http://192.168.1.106:8082/repositories/20"
+    registry = "192.168.1.106:8082/repositories"
     dockerImage = ""
   }
 
@@ -18,7 +18,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build registryUri + ":$BUILD_NUMBER"
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
