@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "http://192.168.1.106:8082/repositories/20"
+    registryUri = "http://192.168.1.106:8082/repositories/20"
     dockerImage = ""
   }
 
@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/justmeandopensource/playjenkins.git'
+        git 'https://github.com/dgm83/playjenkins.git'
       }
     }
 
