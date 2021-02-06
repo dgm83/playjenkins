@@ -5,7 +5,8 @@ pipeline {
   }
 
   environment {
-    registryUri = "http://192.168.1.106:8082/repositories"
+    registryUri = "dgm83/pruebajen:v2"
+    registryCredential = 'dockerhub'
   }
 
   stages {
@@ -19,7 +20,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build (registryUri, "-f Dockerfile .")
+          dockerImage = docker.build (registry, "-f Dockerfile .")
         }
       }
     }
