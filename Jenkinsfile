@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "192.168.99.100:5001/Users/dgm/Workspace/docker-registry/volume"
+    registry = "192.168.1.106:5001"
     dockerImage = ""
   }
 
