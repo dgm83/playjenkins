@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "192.168.1.106:8082/repositories"
+    registry = "dgm83/pruebajen"
     dockerImage = ""
   }
 
