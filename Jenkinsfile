@@ -2,7 +2,7 @@ pipeline {
 
   environment {
     registry = "dgm83/pruebajen"
-    registryCredential = 'd=8!DFcZ~b@5U&tV'
+    registryCredential = 'dockerhub'
   }
 
   agent any
@@ -18,7 +18,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          dockerImage = docker.build (registry, "-f Dockerfile .")
         }
       }
     }
