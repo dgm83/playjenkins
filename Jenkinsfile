@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "192.168.1.106:5001"
+    registry = "192.168.1.106:5000"
     dockerImage = ""
   }
 
